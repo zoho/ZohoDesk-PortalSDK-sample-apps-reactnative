@@ -12,8 +12,11 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
   
-  //use to set light/dark theme
-  [RNZohoDeskPortalSDK setTheme:RNZDThemeLight];
+  ///To use the below  code to set the theme for light and dark
+  CustomLightTheme *myCustomLightTheme = [[CustomLightTheme alloc] init];
+  CustomDarkTheme *myCustomDarkTheme = [[CustomDarkTheme alloc] init];
+  [RNZohoDeskPortalConfiguration updateLightTheme:myCustomLightTheme];//For light
+  [RNZohoDeskPortalConfiguration updateDarkTheme:myCustomDarkTheme];// For Dark
   
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
