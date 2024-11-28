@@ -76,7 +76,7 @@ android {
 
     namespace "com.zohodeskportalsdksampleappsreactnative"
     defaultConfig {
-        applicationId "deskexmaple.zoho.com.deskexampleapp"
+        applicationId "com.zoho.desk.asapsdk"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
