@@ -25,7 +25,7 @@ const InputComponent = () => {
           (msg) => {
             //User Authentication Failed
             //If the user set is failure to ensure the SDK initialised with the correct addOn details
-            //And also verify the bundle id is set correctly for the applications which is set in the web addOn bundleId
+            //And also verify the bundle id is set correctly for the applications of iOS and android which is set in the web addOn
             alert('Failure Alert ' + msg);
           }
         );
