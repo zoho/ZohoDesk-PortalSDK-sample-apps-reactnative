@@ -1,0 +1,18 @@
+
+{
+  "project_info": {
+    "project_id": "dummy-project-id",
+    "project_number": "123456789012",
+    "name": "dummy-project-name"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123456789012:android:abcdef123456",
+        "android_client_info": {
+          "package_name": "com.zoho.desk.asapsdk"
+        }
+      }
+    }
+  ]
+}
