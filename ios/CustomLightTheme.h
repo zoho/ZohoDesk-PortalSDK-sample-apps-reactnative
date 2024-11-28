@@ -7,6 +7,6 @@
 
 #import "RNZDPThemeProtocol.h"
 
-@interface CustomTheme : NSObject <RNZDPThemeProtocol>
+@interface CustomLightTheme : NSObject <RNZDPThemeProtocol>
 
 @end

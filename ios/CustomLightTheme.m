@@ -6,11 +6,11 @@
 //
 
 
-#import "CustomTheme.h"
+#import "CustomLightTheme.h"
 #import <React/RCTRootView.h>
 
 
-@implementation CustomTheme
+@implementation CustomLightTheme
 
 - (UIColor *)themeColor {
     return [UIColor colorWithRed:0.2 green:0.6 blue:0.8 alpha:1.0]; // Custom teal color
