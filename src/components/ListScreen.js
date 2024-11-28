@@ -1,20 +1,18 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
-import { StyleSheet, TouchableOpacity, Text, SafeAreaView, useColorScheme, View, FlatList, TextInput } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, SafeAreaView, useColorScheme, View, FlatList, TextInput, ScrollView } from 'react-native';
 import styles from '../styles/Styles';
 import Colors from '../constants/Colors';
 import { Button, List } from 'react-native-paper';
 import * as Animatable from 'react-native-animatable';
 import { Animations } from '../constants/Animations';
 import LinearGradient from 'react-native-linear-gradient';
-import {
-  ZDPortalHome,
-  ZDPortalKB,
-  ZDPortalCommunity,
-  ZDPortalLiveChat,
-  ZDPortalChat,
-  ZDPortalSubmitTicket,
-  ZDPortalTickets
-} from 'react-native-zohodesk-portal-sdk';
+import {ZohoDeskPortalHome} from '@zohocorp/zohodesk-portal-core'
+import {ZohoDeskPortalKB} from '@zohocorp/zohodesk-portal-kb'
+import {ZohoDeskPortalCommunity} from '@zohocorp/zohodesk-portal-community'
+import {ZohoDeskPortalChatKit} from '@zohocorp/zohodesk-portal-chatkit'
+import {ZohoDeskPortalSalesIQ} from '@zohocorp/zohodesk-portal-salesiq'
+import {ZohoDeskPortalTicket, ZohoDeskPortalSubmitTicket} from '@zohocorp/zohodesk-portal-ticket'
+import renderInputField from './InputField';
 import InputComponent from './InputComponent';
 import ListEmpty from './ListEmpty';
 import ListItem from './ListItem';
@@ -26,32 +24,35 @@ export default function ListScreen() {
   const renderItem = ({ item, index }) => (
     <ListItem item={item} index={index} animation={animation} onPress={(name) => {
       if (name === "Home") {
-        ZDPortalHome.show(); // Use to invoke ASAP sdk Home Screen
+        ZohoDeskPortalHome.show(); // Use to invoke ASAP sdk Home Screen
 
       } else if (name === "Knowledge Base") {
-        ZDPortalKB.show(); // Use to invoke ASAP sdk Knowledge Screen
+        ZohoDeskPortalKB.show(); // Use to invoke ASAP sdk Knowledge Screen
 
       } else if (name === "Community") {
-        ZDPortalCommunity.show(); // Use to invoke ASAP sdk Community Screen
+        ZohoDeskPortalCommunity.show(); // Use to invoke ASAP sdk Community Screen
 
       } else if (name === "Guided Conversation") {
-        ZDPortalLiveChat.show();  // Use to invoke ASAP sdk GC Screen
+        ZohoDeskPortalChatKit.showGC();  // Use to invoke ASAP sdk GC Screen
+        
+      } else if (name === "Bussiness Messenger"){
+        ZohoDeskPortalChatKit.showBM();
 
-      } else if (name === "Live Chat") {
-        ZDPortalChat.show(); // Use to invoke ASAP sdk Live Chat Screen
+      } else if (name === "SalesIQ chat") {
+        ZohoDeskPortalSalesIQ.show(); // Use to invoke ASAP sdk Live Chat Screen
 
       } else if (name === "Submit Ticket") {
-        ZDPortalSubmitTicket.show(); // Use to invoke ASAP sdk Submit Ticket Screen
+        ZohoDeskPortalSubmitTicket.show(); // Use to invoke ASAP sdk Submit Ticket Screen
 
       } else if (name === "My Tickets") {
-        ZDPortalTickets.show(); // Use to invoke ASAP sdk My Ticket Screen
+        ZohoDeskPortalTicket.show(); // Use to invoke ASAP sdk My Ticket Screen
       }
 
     }} />);
 
   return (
     <LinearGradient
-      colors={['#ffffff', '#da1b60']}
+      colors={['#b8eafd', '#79d8fd']}
       style={styles.container}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
@@ -64,13 +65,22 @@ export default function ListScreen() {
           duration={500}
           style={styles.container}>
           <FlatList
-            data={Array(7).fill('')}
+            data={Array(8).fill('')}
             keyExtractor={(_, i) => String(i)}
             numColumns={2}
             renderItem={renderItem}
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ paddingBottom: 100 }}
+            contentContainerStyle={{ paddingBottom: 40, borderColor: 'white', borderWidth: 3, borderRadius: 10, borderLeftWidth: 1, borderRightWidth: 1 ,paddingTop: 10}}
             ListEmptyComponent={ListEmpty}
+            ListFooterComponent={
+              <>
+                <Text style={styles.title}>Permalink</Text>
+                {renderInputField('KB Article', 'kbArticleText')}
+                {renderInputField('KB Category', 'kbCategoryText')}
+                {renderInputField('Community Topic', 'communityTopicText')}
+                {renderInputField('Ticket ID', 'ticketIDText')}
+              </>
+            }
           />
         </Animatable.View>
       </SafeAreaView>
