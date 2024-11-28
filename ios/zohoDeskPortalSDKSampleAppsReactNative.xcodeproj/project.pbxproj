@@ -12,8 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		69A5D6857D3847B2BAB247EA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E5DB17D11414B2CA6DB665F /* Lato-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F20C94ED2CF81E9E00C57086 /* CustomDarkTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F20C94EC2CF81E9300C57086 /* CustomDarkTheme.m */; };
+		F24D31382CF42F4F00865350 /* CustomLightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F24D31372CF42F4900865350 /* CustomLightTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +44,15 @@
 		5709B34CF0A7D63546082F79 /* Pods-zohoDeskPortalSDKSampleAppsReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zohoDeskPortalSDKSampleAppsReactNative.release.xcconfig"; path = "Target Support Files/Pods-zohoDeskPortalSDKSampleAppsReactNative/Pods-zohoDeskPortalSDKSampleAppsReactNative.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests/Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-zohoDeskPortalSDKSampleAppsReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zohoDeskPortalSDKSampleAppsReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5DB17D11414B2CA6DB665F /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = zohoDeskPortalSDKSampleAppsReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests/Pods-zohoDeskPortalSDKSampleAppsReactNative-zohoDeskPortalSDKSampleAppsReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB7D9BFB2BD145040097C18E /* zohoDeskPortalSDKSampleAppsReactNative.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = zohoDeskPortalSDKSampleAppsReactNative.entitlements; path = zohoDeskPortalSDKSampleAppsReactNative/zohoDeskPortalSDKSampleAppsReactNative.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F20C94EC2CF81E9300C57086 /* CustomDarkTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDarkTheme.m; sourceTree = "<group>"; };
+		F20C94EE2CF81ED700C57086 /* CustomDarkTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDarkTheme.h; sourceTree = "<group>"; };
+		F24D31362CF42F3E00865350 /* CustomLightTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLightTheme.h; sourceTree = "<group>"; };
+		F24D31372CF42F4900865350 /* CustomLightTheme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLightTheme.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,10 @@
 		13B07FAE1A68108700A75B9A /* zohoDeskPortalSDKSampleAppsReactNative */ = {
 			isa = PBXGroup;
 			children = (
+				F20C94EE2CF81ED700C57086 /* CustomDarkTheme.h */,
+				F20C94EC2CF81E9300C57086 /* CustomDarkTheme.m */,
+				F24D31372CF42F4900865350 /* CustomLightTheme.m */,
+				F24D31362CF42F3E00865350 /* CustomLightTheme.h */,
 				DB7D9BFB2BD145040097C18E /* zohoDeskPortalSDKSampleAppsReactNative.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -108,6 +120,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		681975BEE646445DBCA7AF20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6E5DB17D11414B2CA6DB665F /* Lato-Bold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +144,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				681975BEE646445DBCA7AF20 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -245,6 +266,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				69A5D6857D3847B2BAB247EA /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,8 +416,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20C94ED2CF81E9E00C57086 /* CustomDarkTheme.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				F24D31382CF42F4F00865350 /* CustomLightTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
