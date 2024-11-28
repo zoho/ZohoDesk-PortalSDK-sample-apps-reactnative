@@ -27,7 +27,6 @@ end
 
 target 'zohoDeskPortalSDKSampleAppsReactNative' do
   config = use_native_modules!
-  pod 'RNZohodeskPortalSdk',:path => '../node_modules/react-native-zohodesk-portal-sdk/ios/RNZohodeskPortalSdk.podspec'
 
   use_react_native!(
     :path => config[:reactNativePath],
