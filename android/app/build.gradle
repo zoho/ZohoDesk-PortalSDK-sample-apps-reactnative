@@ -110,7 +110,7 @@ dependencies {
     implementation("com.facebook.react:flipper-integration")
     implementation("com.google.firebase:firebase-analytics-ktx:20.0.0")
     implementation ("com.google.firebase:firebase-messaging:23.0.5")
-    implementation 'com.reginald:editspinner:1.0.0'
+
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
