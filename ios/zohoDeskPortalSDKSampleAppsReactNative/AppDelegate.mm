@@ -18,6 +18,10 @@
   [RNZohoDeskPortalConfiguration updateLightTheme:myCustomLightTheme];//For light
   [RNZohoDeskPortalConfiguration updateDarkTheme:myCustomDarkTheme];// For Dark
   
+  ///To set the Custom font for ASAP SDK to use the below  code
+  ///And also verify the font assets are added in the react-native project and linked
+  [RNZohoDeskPortalConfiguration customFontName:@"Lato-Bold"];
+  
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
