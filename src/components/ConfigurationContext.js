@@ -1,11 +1,13 @@
 import React, { createContext, useState } from 'react';
 
+// Create a context for the configuration data
 export const ConfigurationContext = createContext();
 
 export const ConfigurationProvider = ({ children }) => {
   const [configurationData, setConfigurationData] = useState([
-    //Home screen configuration pre-setup
-    { id: '1', title: 'Enable Community', isEnabled: true , screen: "Home" },//The default value are set in the isEnabled(true or false) for the configurations
+   // Home screen configuration pre-setup
+    // The default value is set in the isEnabled (true or false) for each configuration
+    { id: '1', title: 'Enable Community', isEnabled: true , screen: "Home" },
     { id: '2', title: 'Enable Knowledge Base', isEnabled: true, screen: "Home" },
     { id: '3', title: 'Enable My Ticket', isEnabled: true , screen: "Home"},
     { id: '4', title: 'Enable Create Ticket', isEnabled: true , screen: "Home"},
@@ -15,7 +17,7 @@ export const ConfigurationProvider = ({ children }) => {
     { id: '8', title: 'Enable Guided Conversation', isEnabled: true , screen: "Home"},
     { id: '9', title: 'Enable Bussiness Messenger', isEnabled: true , screen: "Home" },
   
-    //My tickets configuration pre-setup
+    // My Tickets configuration pre-setup
     { id: '10', title: 'Is Reply Allowed', isEnabled: true , screen: "My Tickets" },
     { id: '11', title: 'Is Comment Allowed', isEnabled: true , screen: "My Tickets" },
     { id: '12', title: 'Is Ticket Update Allowed', isEnabled: true , screen: "My Tickets" },

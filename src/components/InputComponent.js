@@ -14,19 +14,22 @@ const InputComponent = () => {
   };
 
   const handleLoginButtonPress = () => {
-    ZohoDeskPortalSDK.isUserSignedIn((isSignedIn) => { //use this methods for authenticating users in the asap SDK
-      if (!isSignedIn) { // used to check if the user is already signed in or not
+    //use this methods for authenticating users with the asap SDK
+    ZohoDeskPortalSDK.isUserSignedIn((isSignedIn) => { 
+      //It check if the user is already signed to the ASAP SDK
+      if (!isSignedIn) {
         ZohoDeskPortalSDK.loginWithJWTToken(
           token,
-          (msg) => {
-            //User Authenticated Successfully
-            alert('Success Alert ' + msg);
+          (successMsg) => {
+            //User Authenticated Successfully to the ASAP SDK
+            alert('Success Alert ' + successMsg);
           },
-          (msg) => {
-            //User Authentication Failed
-            //If the user set is failure to ensure the SDK initialised with the correct addOn details
-            //And also verify the bundle id is set correctly for the applications of iOS and android which is set in the web addOn
-            alert('Failure Alert ' + msg);
+          (error) => {
+           // User Authentication Failed
+            // If the authentication fails, ensure that the SDK is initialized with the correct add-on details.
+            // Also, verify that the bundle IDs for iOS and Android applications are correctly configured,
+            // matching the values set in the web add-on configuration.
+            alert('Failure Alert ' + error);
           }
         );
       } else {
@@ -35,7 +38,8 @@ const InputComponent = () => {
     });
   };
 
-  const handleLogoutButtonPress = () => { //use this methods for logout the users from asap SDK
+  const handleLogoutButtonPress = () => { 
+    //use this methods for logout the users from ASAP SDK
     ZohoDeskPortalSDK.logout(
       (msg) => {
         //User Logged out Successfully

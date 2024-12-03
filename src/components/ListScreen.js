@@ -24,28 +24,28 @@ export default function ListScreen() {
   const renderItem = ({ item, index }) => (
     <ListItem item={item} index={index} animation={animation} onPress={(name) => {
       if (name === "Home") {
-        ZohoDeskPortalHome.show(); // Use to invoke ASAP sdk Home Screen
-
+        // Invokes the ASAP sdk Home Screen
+        ZohoDeskPortalHome.show(); 
       } else if (name === "Knowledge Base") {
-        ZohoDeskPortalKB.show(); // Use to invoke ASAP sdk Knowledge Screen
-
+        //  Invokes the ASAP sdk Knowledge Screen
+        ZohoDeskPortalKB.show(); 
       } else if (name === "Community") {
-        ZohoDeskPortalCommunity.show(); // Use to invoke ASAP sdk Community Screen
-
+         //  Invokes the  ASAP sdk Community Screen
+        ZohoDeskPortalCommunity.show();
       } else if (name === "Guided Conversation") {
-        ZohoDeskPortalChatKit.showGC();  // Use to invoke ASAP sdk GC Screen
-        
+         //  Invokes the ASAP sdk Community Screen
+        ZohoDeskPortalChatKit.showGC(); 
       } else if (name === "Bussiness Messenger"){
         ZohoDeskPortalChatKit.showBM();
-
       } else if (name === "SalesIQ chat") {
-        ZohoDeskPortalSalesIQ.show(); // Use to invoke ASAP sdk Live Chat Screen
-
+        //  Invokes the ASAP sdk Live Chat Screen
+        ZohoDeskPortalSalesIQ.show(); 
       } else if (name === "Submit Ticket") {
-        ZohoDeskPortalSubmitTicket.show(); // Use to invoke ASAP sdk Submit Ticket Screen
-
+        //  Invokes the ASAP sdk Submit Ticket Screen
+        ZohoDeskPortalSubmitTicket.show(); 
       } else if (name === "My Tickets") {
-        ZohoDeskPortalTicket.show(); // Use to invoke ASAP sdk My Ticket Screen
+        // Invokes the ASAP sdk My Ticket Screen
+        ZohoDeskPortalTicket.show(); 
       }
 
     }} />);

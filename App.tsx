@@ -10,10 +10,14 @@ import { ConfigurationProvider } from './src/components/ConfigurationContext';
 const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
   
-  ZohoDeskPortalSDK.initialise("orgId", "appId", "dc"); // Initializes the ASAP SDK
+  // Initializes the ASAP SDK
+  // To pass the orgId, appId and dc, you can get it from the ASAP Add on details from the web
+  ZohoDeskPortalSDK.initialise("your_orgId", "your_appId", "your_dc");
 
-  ZohoDeskPortalSDK.enableLogs();  // use this method to enable logs
+  // use this method to enable logs
+  ZohoDeskPortalSDK.enableLogs();  
   return (
+    //The configuration provider to provide the ASAP configurations to the components
     <ConfigurationProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Home'>

@@ -12,34 +12,33 @@ import {ZohoDeskPortalConfiguration} from '@zohocorp/zohodesk-portal-configurati
 
 export default function ConfigurationScreen({route}) {
 
-    const {screenName} = route.params;
-    const { configurationData, setConfigurationData } = useContext(ConfigurationContext);
+    const {screenName} = route.params; // Extract the screen name from the route params
+    const { configurationData, setConfigurationData } = useContext(ConfigurationContext);// Access context for configuration data
 
-    //To get the configurations based on the screen
+    // Filter configuration data based on the screen name
     const [data, setData] = useState(configurationData.filter(item => item.screen == screenName));
 
 
       useEffect(()=>{
-        setConfigurations()
+        setConfigurations()// setup the configuration on data change
       },[data])
 
       //Set The configurations based on the screen
       const setConfigurations = () =>{
-        console.log(screenName)
         if (screenName === "Home"){
-          //if the screen configuration is Home
+          // Apply home screen configuration
           homeConfiguration()
         }else if (screenName === "My Tickets"){
-          //If the screen is mytickets 
+          // Apply ticket screen configuration
           ticketConfiguration()
         }else if (screenName === "Knowledge Base"){
-          // If the screen is Knowledge Base 
+          // Apply knowledge base screen configuration
           kbConfiguration()
         }else if (screenName === "Community"){
-          // If the screen is Community 
+         // Apply community screen configuration
           communityConfiguration()
         }else {
-          // If the screen is module  
+          // Apply module screen configuration
           moduleConfiguration()
         }
       }
@@ -120,6 +119,8 @@ export default function ConfigurationScreen({route}) {
           disableArticleDetailSearch: data[2].isEnabled
         });
       }
+
+      // Function to handle the toggle of switch (enable/disable configuration)
       const toggleSwitch = (id) => {
         const updatedData = data.map((item) =>
           item.id === id ? { ...item, isEnabled: !item.isEnabled } : item
@@ -134,7 +135,8 @@ export default function ConfigurationScreen({route}) {
         );
       };
 
-      // Render item
+      
+    // Render each configuration item with a switch to toggle enable/disable state
     const renderItem = ({ item }) => (
         <View style={styles.row}>
              <Text style={styles.text}>{item.title}</Text>

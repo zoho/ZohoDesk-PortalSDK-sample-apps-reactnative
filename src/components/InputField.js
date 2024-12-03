@@ -23,18 +23,23 @@ const [formValues, setFormValues] = useState({
 
   function permalinkAction(fieldName){
     if (fieldName == "kbArticleText"){
-        // To pass the kB article permalink
-        // example:- https://your_help.in/portal/en/kb/articles/fundamental-types
-        // To paste the below text "fundamental-types"
+       // Display a Knowledge Base article based on its permalink.
+        // Example URL: https://your_helpcenter.in/portal/en/kb/articles/fundamental-types
+        // Pass only the article permalink: "fundamental-types".
       ZohoDeskPortalKB.showArticle(formValues.kbArticleText)
     }else if (fieldName === "kbCategoryText"){
-        // TO pass the category permalink
+        // Display a Knowledge Base category based on its permalink.
+        // Example URL: https://your_helpcenter.in/portal/en/community/asapmobileautomation
+        // Pass only the category permalink: "asapmobileautomation".
       ZohoDeskPortalKB.showCategory(formValues.kbCategoryText)
     }else if (fieldName === "communityTopicText"){
-        // To pass the community topic permalink
+        // Display a community topic based on its permalink.
+        // Example URL: https://your_helpcenter.in/portal/en/community/topic/swift-package-manager
+        // Pass only the topic permalink: "swift-package-manager".
       ZohoDeskPortalCommunity.showTopic(formValues.communityTopicText)
     }else if (fieldName === "ticketIDText"){
-        // To pass the ticket id 
+       // Display ticket details based on the ticket ID.
+      // Example ticket ID: "12345678990".
       ZohoDeskPortalTicket.showTicketDetail(formValues.ticketIDText)
     }
   }
