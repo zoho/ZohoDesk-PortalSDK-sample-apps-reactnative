@@ -31,6 +31,9 @@ const [formValues, setFormValues] = useState({
         // Display a Knowledge Base category based on its permalink.
         // Example URL: https://your_helpcenter.in/portal/en/community/asapmobileautomation
         // Pass only the category permalink: "asapmobileautomation".
+        // For Nested Cateogries:
+        //    Example URL: https://your_helpcenter.in/portal/en/community/asapmobileautomation/general
+        //    Pass the category permalink with the parent category permalink: "asapmobileautomation/general"
       ZohoDeskPortalKB.showCategory(formValues.kbCategoryText)
     }else if (fieldName === "communityTopicText"){
         // Display a community topic based on its permalink.
