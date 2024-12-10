@@ -5,6 +5,19 @@ import {ZDCustomizedTicketField, ZDCustomizedTicketForm, ZDVisibleTicketField} f
 
 // The following APIs require importing ZohoDeskPortalSDK from '@zohocorp/zohodesk-portal-apikit'
 
+
+// Fetch all departments and their details.
+function getDepartments(){
+  ZohoDeskPortalSDK.getDepartments((departments)=>{
+    // Success callback: This callback returns an array of Department model objects,
+    // each containing details of a department, such as its ID, name, and other attributes.
+    console.log("Success: ",departments)
+  },(error) => {
+    console.log("Error fetching departments: ",error)
+  });
+}
+
+
 // To create a ticket for an authenticated user
 function createTicket(){
   let ticketParam = {
