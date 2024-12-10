@@ -137,18 +137,6 @@ function updateUserInformation(){
 }
 
 
-// Fetch all departments and their details.
-function getDepartments(){
-  ZohoDeskPortalSDK.getDepartments((departments)=>{
-    // Success callback: This callback returns an array of Department model objects,
-    // each containing details of a department, such as its ID, name, and other attributes.
-    console.log("Success: ",departments)
-  },(error) => {
-    console.log("Error fetching departments: ",error)
-  });
-}
-
-
 //Add attachments to a ticket.
 function addAttachment(){
   const path =  '/Hello.txt'; // Specify the path to the file you want to upload.
