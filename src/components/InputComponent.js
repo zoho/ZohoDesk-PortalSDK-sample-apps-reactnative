@@ -53,8 +53,22 @@ const InputComponent = () => {
   };
 
   const enablePushNotification = () => {
-     // use this method to enable push notification
-     ZohoDeskPortalSDK.enablePush()
+    // Use this method to enable push notifications.
+    // Please complete the following steps before calling this method:
+
+    // For iOS:
+    //   1. Open `ios/AppDelegate.m`.
+    //   2. In the `didRegisterForRemoteNotificationsWithDeviceToken` method, 
+    //      add the push notification token to the SDK.
+    //   3. Refer to the provided examples in the specified location for guidance.
+
+    // For Android:
+    //   1. Open `android/app/src/main/java/com/zohodesk/portalapp/MainActivity.java`.
+    //   2. In the `onPause` method, add the Firebase ID to the SDK.
+    //   3. Refer to the provided examples in the specified location for guidance.
+
+    // Once the above steps are completed, call the following method to enable push notifications:
+    ZohoDeskPortalSDK.enablePush()
   }
 
   const disablePushNotification = () => {
