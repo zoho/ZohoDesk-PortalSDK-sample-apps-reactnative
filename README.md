@@ -28,7 +28,7 @@ npm install
 ```
 
 For ios to run the following commands
-```
+```shell
 cd ios && pod install
 ```
 
