@@ -12,6 +12,7 @@ const asapModules = [
     { name: "My Tickets", description: "Follow up with your tickets" , configuration: true },
     { name: "Guided Conversation", description: "Chat with GC Bot for more info" },
     { name: "Bussiness Messenger", description: "Chat with Bussiness messenger"},
+    { name: "Answer Bot", description: "Chat with Bot"},
     { name: "SalesIQ chat", description: "Chat with agent for more info" },
     { name: "Submit Ticket", description: "Don't find any solution, raise your ticket" },
   ];
