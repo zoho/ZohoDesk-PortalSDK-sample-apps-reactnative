@@ -46,6 +46,9 @@ export default function ListScreen() {
       } else if (name === "My Tickets") {
         // Invokes the ASAP sdk My Ticket Screen
         ZohoDeskPortalTicket.show(); 
+      } else if (name === "Answer Bot") {
+        // Invokes the ASAP sdk Answer Bot Screen
+        ZohoDeskPortalChatKit.showAnswerBot(); 
       }
 
     }} />);
