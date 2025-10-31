@@ -4,6 +4,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import "RNZohoDeskPortalConfiguration.h"
 #import "RNZohoDeskPortalAPIKit.h"
+#import <UserNotifications/UserNotifications.h> 
 
 @implementation AppDelegate
 
@@ -26,6 +27,7 @@
   ///To set the Custom font for ASAP SDK to use the below  code
   ///And also verify the font assets are added in the react-native project and linked
   [RNZohoDeskPortalConfiguration customFontName:@"Lato-Bold"];
+  [self enablePushNotification:application];
   
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
@@ -44,19 +46,33 @@
 #endif
 }
 
+- (void)enablePushNotification:(UIApplication *)application {
+    // iOS 10 support
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
+
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionAlert | UNAuthorizationOptionSound)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        // You can handle the response here if needed
+    }];
+
+    [application registerForRemoteNotifications];
+}
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+  NSMutableString *tokenString = [NSMutableString string];
+  const unsigned char *bytes = (const unsigned char *)[deviceToken bytes];
+  for (NSInteger i = 0; i < deviceToken.length; i++) {
+    [tokenString appendFormat:@"%02X", bytes[i]];
+  }
   
-//  const unsigned char *tokenBytes = deviceToken.bytes;
-//    NSString *hexToken = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x",
-//                          tokenBytes[0], tokenBytes[1], tokenBytes[2], tokenBytes[3],
-//                          tokenBytes[4], tokenBytes[5], tokenBytes[6], tokenBytes[7]];
-//  [RNZohoDeskPortalSDK setDeviceIDForNotification:hexToken];
+ [RNZohoDeskPortalSDK setDeviceIDForNotification:tokenString];
   
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
   // use this method to handle push notification
- 
+  [RNZohoDeskPortalConfiguration processRemoteNotification:userInfo];
 }
 @end
